@@ -47,16 +47,19 @@ It covers **data ingestion → transformation → testing → scheduling**, foll
 ## 🚀 Setup & Installation
 
 ### 1️⃣ Clone the Repository
-```bash
+```sh
 git clone https://github.com/OSA-EL/Applying-ETL-Using-Python_dbt_Airflow_snowflake.git
 cd Applying-ETL-Using-Python_dbt_Airflow_snowflake
+```
 
+```sh
 ### 2️⃣ Create a Virtual Environment
 python -m venv venv
 # Activate it
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
-
+```
+```sh
 ### 3️⃣ Configure dbt with Snowflake
 
 Update profiles.yml (usually in ~/.dbt/) with your Snowflake credentials:
@@ -73,14 +76,18 @@ snowflake_project:
       warehouse: finance_wh
       schema: raw
   target: dev
+```
 
+```sh
 ### 4️⃣ Run dbt Models
 dbt run        # Build models
 dbt test       # Run data quality tests
+```
 
+```sh
 ### 5️⃣ Start Apache Airflow
 airflow standalone
-
+```
 
 Open the Airflow UI at http://localhost:8080.
 
