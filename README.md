@@ -52,18 +52,19 @@ git clone https://github.com/OSA-EL/Applying-ETL-Using-Python_dbt_Airflow_snowfl
 cd Applying-ETL-Using-Python_dbt_Airflow_snowflake
 ```
 
-```sh
+
 ### 2️⃣ Create a Virtual Environment
+```sh
 python -m venv venv
 # Activate it
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 ```
-```sh
+
 ### 3️⃣ Configure dbt with Snowflake
 
 Update profiles.yml (usually in ~/.dbt/) with your Snowflake credentials:
-
+```sh
 snowflake_project:
   outputs:
     dev:
@@ -78,16 +79,17 @@ snowflake_project:
   target: dev
 ```
 
-```sh
 ### 4️⃣ Run dbt Models
+
+```sh
 dbt run        # Build models
 dbt test       # Run data quality tests
 ```
 
-```sh
+
 ### 5️⃣ Start Apache Airflow
 airflow standalone
-```
+
 
 Open the Airflow UI at http://localhost:8080.
 
