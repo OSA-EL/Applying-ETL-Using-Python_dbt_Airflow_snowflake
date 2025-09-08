@@ -27,16 +27,18 @@ It covers **data ingestion → transformation → testing → scheduling**, foll
 
 ---
 
-## 📂 Project Structure
 
-snowflake_data_project/
-│── models/ # dbt models (staging, marts, analytics)
-│── dags/ # Airflow DAGs (scheduling pipelines)
-│── logs/ # Airflow logs
-│── seeds/ # Sample seed data for dbt
-│── macros/ # dbt macros
-│── dbt_project.yml # dbt project configuration
-│── README.md # Project documentation
+## Project Structure  
+```bash
+ snowflake_data_project/
+│──  models/                 # dbt models (staging, marts)
+│──  dags/                   # Airflow DAGs (for scheduling)
+│──  logs/                   # Airflow logs
+│──  seeds/                  # Sample seed data for dbt
+│──  macros/                 # dbt macros
+│──  dbt_project.yml         # dbt project config file
+│──  README.md               # Project documentation
+```
 
 
 
@@ -49,13 +51,13 @@ snowflake_data_project/
 git clone https://github.com/OSA-EL/Applying-ETL-Using-Python_dbt_Airflow_snowflake.git
 cd Applying-ETL-Using-Python_dbt_Airflow_snowflake
 
-2️⃣ Create a Virtual Environment
+### 2️⃣ Create a Virtual Environment
 python -m venv venv
 # Activate it
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 
-3️⃣ Configure dbt with Snowflake
+### 3️⃣ Configure dbt with Snowflake
 
 Update profiles.yml (usually in ~/.dbt/) with your Snowflake credentials:
 
@@ -72,31 +74,21 @@ snowflake_project:
       schema: raw
   target: dev
 
-4️⃣ Run dbt Models
+### 4️⃣ Run dbt Models
 dbt run        # Build models
 dbt test       # Run data quality tests
 
-5️⃣ Start Apache Airflow
+### 5️⃣ Start Apache Airflow
 airflow standalone
 
 
 Open the Airflow UI at http://localhost:8080.
 
-✅ Future Improvements
+### ✅ Future Improvements
 
 - Add CI/CD integration with GitHub Actions
 - Implement dbt docs site for data lineage
 - Add unit tests for Airflow DAGs
 - Extend to include a streaming ingestion layer (Kafka/Spark)
 
-
-## 🔄 ETL Pipeline Flow
-
-```mermaid
-flowchart LR
-    A[Data Source] --> B[Ingestion]
-    B --> C[Raw Layer - Snowflake]
-    C --> D[dbt Transformations]
-    D --> E[Analytics Layer / Marts]
-    E --> F[Airflow Scheduling & Monitoring]
 
