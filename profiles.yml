@@ -1,0 +1,12 @@
+snowflake_data_project_airflow:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: tp77753.me-central2.gcp       # from your Snowflake login URL
+      user: OSYASS                              # your Snowflake username
+      password: OSAMA@snow2025            # your Snowflake password
+      role: ACCOUNTADMIN
+      warehouse: FINANCE_WH
+      database: FINANCE_DB
+      schema: raw
