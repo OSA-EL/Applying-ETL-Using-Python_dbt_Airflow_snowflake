@@ -48,8 +48,8 @@ It covers **data ingestion → transformation → testing → scheduling**, foll
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/OSA-EL/Applying-ETL-Using-Python_dbt_Airflow_snowflake.git
-cd Applying-ETL-Using-Python_dbt_Airflow_snowflake
+[git clone https://github.com/OSA-EL/Applying-ETL-Using-Python_dbt_Airflow_snowflake.git
+cd Applying-ETL-Using-Python_dbt_Airflow_snowflake](https://github.com/OSA-EL/Analyzing-data-Using-Python_dbt_Airflow_snowflake.git)
 ```
 
 
